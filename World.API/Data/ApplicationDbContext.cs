@@ -1,0 +1,17 @@
+﻿using Microsoft.EntityFrameworkCore;
+using World.API.Models;
+
+namespace World.API.Data
+{
+    public class ApplicationDbContext : DbContext
+    {
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) 
+        { 
+            
+        }
+
+        public DbSet<Country> Countries { get; set; }
+        public DbSet<States> States { get; set; }
+        public DbSet<User> Users { get; set; }
+    }   
+}
